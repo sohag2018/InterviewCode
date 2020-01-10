@@ -1,0 +1,19 @@
+Generic introduced in Java 1.5
+by using generic concept we can specify our class method and class specific type
+example: <Integer> -->it means this is Integer type
+         Class--> class Contaier<Integer>{}  -->this class is Integer type
+                  class Contaier<T>{}  -->this class will be any type--will be specified while obj created
+                  class Contaier<E>{}  -->this class is Object type
+                  
+         ArrayList--> ArrayList<String>  -->This ArrayList will accept only String
+         HashMap--->HashMap<Integer,String>  -->Key should be Interger and Value should be String
+         
+AS we keep it as <T> and it will accept any type but we want it to accept only number
+by extending Number Class--><T extends Number> -->then it will accept Integer,Double and Float because These classes extend Number class internaly
+example:class Container2<T extends Number>{}
+
+** If we declare the ArrayList Integer like -->ArrayList<Integer>  --we can pass even Number while creating obj
+but if we write ArrayList<? extends T>--then we can do it 
+because if the class is generic type<T> which extends Number class like <T extends Number>
+explantion-->class<T extends Number>--then ArrayList<? extends T>  so it will make it accepts Number finally
+See the Generic2 Class
